@@ -73,7 +73,7 @@ nav {
         height: 92vh;
         /* right under nav bar */
         top: 8vh;
-        background-color: black;
+        background-color: #5d4954;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -92,4 +92,16 @@ nav {
 
 .nav-active {
     transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
 }

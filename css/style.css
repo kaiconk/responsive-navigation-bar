@@ -10,7 +10,8 @@ nav {
     align-items: center;
 
     min-height: 8vh;
-    background-color: #5d4954;
+    background-color: #5d4954; 
+   /* background-color: black; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -44,6 +45,7 @@ nav {
 /* hide mobile nav */
 .burger {
     display: none;
+    cursor: pointer;
 }
 
 .burger div {
@@ -61,5 +63,33 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-    
+    body {
+        /* hide horz scroll bar */
+        overflow-x: hidden;
+    }
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        /* right under nav bar */
+        top: 8vh;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li {
+        opacity: 0;
+
+    }
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
 }

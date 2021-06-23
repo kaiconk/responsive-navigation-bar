@@ -1,0 +1,4 @@
+// anonymous function
+const navSlide = () => {
+
+}
